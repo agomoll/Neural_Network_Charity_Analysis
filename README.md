@@ -22,32 +22,26 @@ The following processes were performed to transform, analyze, train and test mac
 
 Figure 1. Dropping Unnecessary Columns
 
-<img src="Resources/nn_1_df_dropcollumn.png" width="50%">
+<img src="Resources/nn_1_df_dropcollumn.png" width="85%">
 
 
 Figure 2. Binning Features with low Value Counts
 
-<img src="Resources/binning.png" width="50%">
-
-
-Figure 3. PCA Reduction to Three Features
-
-<img src="Resources/pca_reduction.png" width="75%">
-
+<img src="Resources/binning.png" width="85%">
 
 
 ### Neural Network Model 1
 The first Neural Network Deep Learning Model was developed to fit, train, and test on the data. The model used two hidden layers using ReLU activation functions, the first of which had 80 nodes while the second had 30 nodes.  The output layer used a Sigmoid activation function. Additionally, the model’s weights were saved every 5 epochs to an HDF5 file. As seen in Figure 5, the Loss ( 0.566) was a bit high and the accuracy (0.726) a little lower than our desired accuracy of 75%. 
 
 
-Figure 4. Neural Network Model 1
+Figure 3. Neural Network Model 1
 
-<img src="Resources/nn_1_model.png" width="50%">
+<img src="Resources/nn_1_model.png" width="55%">
 
 
-Figure 5. Loss and Accuracy for Neural Network Model 1
+Figure 4. Loss and Accuracy for Neural Network Model 1
 
-<img src="Resources/nn_1_loss_accuracy.png" width="50%">
+<img src="Resources/nn_1_loss_accuracy.png" width="55%">
 
 
 
@@ -55,38 +49,27 @@ Figure 5. Loss and Accuracy for Neural Network Model 1
 In an attempt to improve the model performance, changes to the features were investigated to improve model performance. A correlation matrix was created to identify features with very weak relationships with the target variable. After doing so, six features were identified with correlation less than +/- 0.005 with the target variable.  These features were dropped and the model was retrained and tested. The performance was only slightly improved (loss = 0.558, accuracy = 0.732).
 
 
-Figure 6. Neural Network Model 2 Loss and Accuracy
+Figure 5. Neural Network Model 2 Loss and Accuracy
 
-<img src="Resources/nn_2_loss_accuracy.png" width="50%">
+<img src="Resources/nn_2_loss_accuracy.png" width="55%">
 
 
 ### Neural Network Model 3 
 Next, another attempt was made to improve the model by adjusting the number of layers and neurons. The first hidden layer was increased to 100 neurons based on the convention of using 2-3 times the number of features. In this case our features were reduced to 35 so this was at the upper end of conventional recommendations. For the second hidden layer, the neurons were increased from 30 to 50 in an attempt to further distribute computation.  An additional layer was added as well with 25 neurons to increase the model’s capacity for complexity. Again, the model was only slightly improved (loss = 0.567, accuracy = 0.734). 
 
 
-Figure 7. Neural Network Model 3
+Figure 6. Neural Network Model 3
 
-<img src="Resources/nn_3_model.png" width="50%">
+<img src="Resources/nn_3_model.png" width="55%">
 
 
- Figure 8. Neural Network Model 3 Loss and Accuracy
+ Figure 7. Neural Network Model 3 Loss and Accuracy
  
-<img src="Resources/nn_3_loss_accuracy.png" width="50%">
+<img src="Resources/nn_3_loss_accuracy.png" width="55%">
 
 
 ### Neural Network Model 4
 A final attempt was made to optimize the model by changing activation functions. All layers were switched to Sigmoid activation functions. Little change was observed for both loss (0.545) and accuracy (0.731). 
-
-
-Figure 9. Neural Network Model 4
-
-<img src="Resources/nn_4_model.png" width="50%">
-
-
- Figure 10. Neural Network Model 4 Loss and Accuracy
- 
-<img src="Resources/nn_4_loss_accuracy.png" width="50%">
-
 
 
 # Summary
