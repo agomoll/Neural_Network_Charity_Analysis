@@ -22,18 +22,12 @@ The following processes were performed to transform, analyze, train and test mac
 
 Figure 1. Dropping Unnecessary Columns
 
-<img src="Resources/nn_1_df_dropcollumn.png" width="50%">
+<img src="Resources/nn_1_df_dropcollumn.png" width="75%">
 
 
 Figure 2. Binning Features with low Value Counts
 
-<img src="Resources/binning.png" width="50%">
-
-
-Figure 3. PCA Reduction to Three Features
-
-<img src="Resources/pca_reduction.png" width="75%">
-
+<img src="Resources/binning.png" width="75%">
 
 
 ### Neural Network Model 1
@@ -47,7 +41,7 @@ Figure 4. Neural Network Model 1
 
 Figure 5. Loss and Accuracy for Neural Network Model 1
 
-<img src="Resources/nn_1_loss_accuracy.png" width="50%">
+<img src="Resources/nn_1_loss_accuracy.png" width="55%">
 
 
 
@@ -57,7 +51,7 @@ In an attempt to improve the model performance, changes to the features were inv
 
 Figure 6. Neural Network Model 2 Loss and Accuracy
 
-<img src="Resources/nn_2_loss_accuracy.png" width="50%">
+<img src="Resources/nn_2_loss_accuracy.png" width="55%">
 
 
 ### Neural Network Model 3 
@@ -76,16 +70,6 @@ Figure 7. Neural Network Model 3
 
 ### Neural Network Model 4
 A final attempt was made to optimize the model by changing activation functions. All layers were switched to Sigmoid activation functions. Little change was observed for both loss (0.545) and accuracy (0.731). 
-
-
-Figure 9. Neural Network Model 4
-
-<img src="Resources/nn_4_model.png" width="50%">
-
-
- Figure 10. Neural Network Model 4 Loss and Accuracy
- 
-<img src="Resources/nn_4_loss_accuracy.png" width="50%">
 
 
 
